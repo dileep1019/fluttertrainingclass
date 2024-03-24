@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_first/products_view_model.dart';
 import 'package:provider/provider.dart';
-import 'dart:js';
-
-
 
 class ProductsList extends StatefulWidget {
   const ProductsList({Key? key}) : super(key: key);
@@ -39,9 +36,9 @@ class _ProductsListState extends State<ProductsList> {
 
   @override
   void initState() {
-   
     super.initState();
     //context.read<ProductsViewMode>().getProductsFromServer();
-      Provider.of<ProductsViewModel>(context as BuildContext,listen: false).getProductsFromServer();
+    Provider.of<ProductsViewModel>(context as BuildContext, listen: false)
+        .getProductsFromServer();
   }
 }

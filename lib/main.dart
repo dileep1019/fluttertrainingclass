@@ -1,8 +1,5 @@
-import 'dart:js';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_first/api_call.dart';
-import 'package:flutter_first/bottom_navigationbar.dart';
 import 'package:flutter_first/column.dart';
 import 'package:flutter_first/forgot_password.dart';
 import 'package:flutter_first/form%20_validation.dart';
@@ -17,14 +14,13 @@ import 'package:flutter_first/list_view.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(
-    MultiProvider(
-    providers: [
-      ChangeNotifierProvider(create: (context) => ProductsViewModel())
-    ],
-    // ignore: prefer_const_constructors
-    child:MaterialApp(home: const ProductsList() 
-      /*routes: {
+  runApp(MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => ProductsViewModel())
+      ],
+      // ignore: prefer_const_constructors
+      child: MaterialApp(home: const ProductsList()
+          /*routes: {
       "/LoginScreen": (context) => Login(),
       "/register": (context) => LoginForm(),
       "/forgetPassword": (context) => ForgotPassword(),
@@ -32,7 +28,7 @@ void main() {
       "/productsList":(context) => ProductsList()
     },*/
 
-      /* Scaffold(
+          /* Scaffold(
       body: Container(
   
         decoration: BoxDecoration(
@@ -47,5 +43,5 @@ void main() {
         child: Text("This is my first design"),
       ),
     ),*/
-      )));
+          )));
 }
